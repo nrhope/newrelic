@@ -29,6 +29,10 @@ common: &default_settings
   agent_enabled: <%= @resource.enabled %>
   <% end -%>
 
+  # NH: this is tripping many times a day and may be obscuring real problems
+  circuitbreaker:
+    enabled: false
+
   # Set to true to enable support for auto app naming.
   # The name of each web app is detected automatically
   # and the agent reports data separately for each one.
